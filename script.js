@@ -1,4 +1,3 @@
-// Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(entries => {
@@ -12,7 +11,6 @@ const observer = new IntersectionObserver(entries => {
 
 reveals.forEach(el => observer.observe(el));
 
-// Product selector
 const serviceSelect = document.getElementById('service');
 const productField  = document.getElementById('product-field');
 const productSelect = document.getElementById('product');
@@ -22,7 +20,6 @@ serviceSelect.addEventListener('change', function () {
     this.value === 'Ads & Instagram Posts' ? 'flex' : 'none';
 });
 
-// Pre-fill
 window.addEventListener('load', function () {
   const saved = localStorage.getItem('enquiry_product');
   if (saved) {
@@ -33,7 +30,6 @@ window.addEventListener('load', function () {
   }
 });
 
-// Button feedback
 document.querySelector('.btn-submit').addEventListener('click', function () {
   this.textContent = 'Message Sent ✦';
   this.style.background = 'var(--charcoal)';
